@@ -10,7 +10,7 @@ md = Markdown(
     "## nbterm help\n"
     "There are two modes: edit mode, and command mode.\n"
     "\n"
-    "- `enter`: enter the edit mode, allowing to type into the cell.\n"
+    "- `i`: enter the edit mode, allowing to type into the cell.\n"
     "- `esc`: exit the edit mode and enter the command mode.\n"
     "\n"
     "In command mode:\n"
@@ -30,9 +30,9 @@ md = Markdown(
     "- `m`: set as Markdown cell.\n"
     "- `l`: clear cell outputs.\n"
     "- `ctrl-e`: run cell.\n"
-    "- `ctrl-r`: run cell and select below.\n"
+    "- `enter` or `ctrl-r`: run cell and select below.\n"
     "- `ctrl-s`: save.\n"
-    "- `ctrl-q`: exit.\n"
+    "- `ctrl-q` or `ctrl-d`: exit.\n"
     "- `ctrl-h`: show help.\n"
 )
 
