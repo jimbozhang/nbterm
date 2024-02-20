@@ -1,24 +1,18 @@
 [![Build Status](https://github.com/davidbrochart/nbterm/workflows/CI/badge.svg)](https://github.com/davidbrochart/nbterm/actions)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-# nbterm
+# vinbterm
+
+vinbterm is [nbterm](https://github.com/davidbrochart/nbterm) with some keybinding modifications.
 
 Lets you view, edit and execute Jupyter Notebooks in the terminal.
-
-**WARNING**: [jpterm](https://github.com/davidbrochart/jpterm) is the successor of nbterm, which is not maintained anymore.
 
 ## Install
 
 Using pip:
 
 ```
-pip install nbterm
-```
-
-Using conda:
-
-```
-mamba install nbterm -c conda-forge
+pip install vinbterm
 ```
 
 You will also need a kernel, e.g. `ipykernel` or `xeus-python` for Python, `xeus-cling` for C++.
@@ -28,20 +22,20 @@ You will also need a kernel, e.g. `ipykernel` or `xeus-python` for Python, `xeus
 Open an interactive notebook:
 
 ```
-$ nbterm my_notebook.ipynb
+$ vinbterm my_notebook.ipynb
 ```
 
 Run a notebook in batch mode:
 
 ```
-$ nbterm --run my_notebook.ipynb
+$ vinbterm --run my_notebook.ipynb
 ```
 
 ## Key bindings
 
 There are two modes: edit mode, and command mode.
 
-- `enter`: enter the edit mode, allowing to type into the cell.
+- `i`: enter the edit mode, allowing to type into the cell.
 - `esc`: exit the edit mode and enter the command mode.
 
 In command mode:
@@ -61,7 +55,7 @@ In command mode:
 - `m`: set as Markdown cell.
 - `l`: clear cell outputs.
 - `ctrl-e`: run cell.
-- `ctrl-r`: run cell and select below.
-- `ctrl-s`: save.
-- `ctrl-q`: exit.
+- `enter` or `ctrl-r`: run cell and select below.
+- `ctrl-w` or `ctrl-s`: save.
+- `ctrl-d` or `ctrl-q`: exit.
 - `ctrl-h`: show help.
