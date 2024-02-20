@@ -43,6 +43,7 @@ class KeyBindings:
             self.show_help()
 
         @self.key_bindings.add("c-d", filter=not_help_mode)
+        @self.key_bindings.add("c-q", filter=not_help_mode)
         async def c_q(event):
             await self.exit()
 
@@ -112,12 +113,12 @@ class KeyBindings:
             self.raw_cell()
 
         @self.key_bindings.add("c-e", filter=command_mode)
-        @self.key_bindings.add("enter", filter=command_mode)
         async def c_e(event):
             self.quitting = False
             await self.queue_run_cell()
 
         @self.key_bindings.add("c-r", filter=command_mode)
+        @self.key_bindings.add("enter", filter=command_mode)
         async def c_r(event):
             self.quitting = False
             await self.queue_run_cell(and_select_below=True)
