@@ -48,6 +48,7 @@ class KeyBindings:
             await self.exit()
 
         @self.key_bindings.add("c-s", filter=command_mode)
+        @self.key_bindings.add("c-w", filter=command_mode)
         def c_s(event):
             self.quitting = False
             self.save()
