@@ -7,9 +7,9 @@ with open(os.path.join(here, "nbterm", "_version.py")) as f:
     exec(f.read(), {}, version_ns)
 
 setup(
-    name="nbterm",
+    name="vinbterm",
     version=version_ns["__version__"],
-    url="https://github.com/davidbrochart/nbterm.git",
+    url="https://github.com/jimbozhang/nbterm",
     author="David Brochart",
     author_email="david.brochart@gmail.com",
     description="A tool for viewing, editing and executing Jupyter Notebooks in the terminal",

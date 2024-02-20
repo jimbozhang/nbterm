@@ -24,7 +24,6 @@ class KeyBindings:
             return not self.help_mode
 
         @self.key_bindings.add("enter", filter=help_mode)
-        @self.key_bindings.add("c-q", filter=help_mode)
         @self.key_bindings.add("escape", filter=help_mode)
         def quit_help(event):
             self.quitting = False
@@ -43,6 +42,7 @@ class KeyBindings:
             self.quitting = False
             self.show_help()
 
+        @self.key_bindings.add("c-d", filter=not_help_mode)
         @self.key_bindings.add("c-q", filter=not_help_mode)
         async def c_q(event):
             await self.exit()
@@ -52,7 +52,7 @@ class KeyBindings:
             self.quitting = False
             self.save()
 
-        @self.key_bindings.add("enter", filter=command_mode)
+        @self.key_bindings.add("i", filter=command_mode)
         def enter_cell(event):
             self.quitting = False
             self.enter_cell()
@@ -118,6 +118,7 @@ class KeyBindings:
             await self.queue_run_cell()
 
         @self.key_bindings.add("c-r", filter=command_mode)
+        @self.key_bindings.add("enter", filter=command_mode)
         async def c_r(event):
             self.quitting = False
             await self.queue_run_cell(and_select_below=True)
