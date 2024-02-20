@@ -5,17 +5,16 @@
 
 vinbterm is [nbterm](https://github.com/davidbrochart/nbterm) with some keybinding modifications, and setting edit mode as default.
 
+The command is remained as `nbterm`, instead of "vinbterm".
+
 Lets you view, edit and execute Jupyter Notebooks in the terminal.
 
 ## Install
-
-Using pip:
 
 ```
 pip install vinbterm
 ```
 
-You will also need a kernel, e.g. `ipykernel` or `xeus-python` for Python, `xeus-cling` for C++.
 
 ## Usage
 
