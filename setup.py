@@ -23,6 +23,7 @@ setup(
         "pygments",
         "rich",
         "kernel_driver>=0.0.6",
+        "ipykernel",
     ],
     extras_require={
         "test": [
@@ -30,7 +31,6 @@ setup(
             "flake8",
             "black",
             "pytest",
-            "ipykernel",
         ],
     },
     entry_points={

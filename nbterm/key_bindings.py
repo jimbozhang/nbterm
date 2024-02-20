@@ -23,7 +23,7 @@ class KeyBindings:
         def not_help_mode() -> bool:
             return not self.help_mode
 
-        @self.key_bindings.add("enter", filter=help_mode)
+        @self.key_bindings.add("q", filter=help_mode)
         @self.key_bindings.add("escape", filter=help_mode)
         def quit_help(event):
             self.quitting = False
@@ -63,32 +63,26 @@ class KeyBindings:
             self.quitting = False
             self.exit_cell()
 
+        @self.key_bindings.add("k", filter=command_mode)
         @self.key_bindings.add("up", filter=command_mode)
         def up_arrow(event):
             self.quitting = False
             self.go_up()
 
-        @self.key_bindings.add("k", filter=command_mode)
-        def up(event):
-            self.quitting = False
-            self.go_up()
-
+        @self.key_bindings.add("j", filter=command_mode)
         @self.key_bindings.add("down", filter=command_mode)
         def down_arrow(event):
             self.quitting = False
             self.go_down()
 
-        @self.key_bindings.add("j", filter=command_mode)
-        def down(event):
-            self.quitting = False
-            self.go_down()
-
         @self.key_bindings.add("c-up", filter=command_mode)
+        @self.key_bindings.add("c-k", filter=command_mode)
         def c_up(event):
             self.quitting = False
             self.move_up()
 
         @self.key_bindings.add("c-down", filter=command_mode)
+        @self.key_bindings.add("c-j", filter=command_mode)
         def c_down(event):
             self.quitting = False
             self.move_down()
@@ -103,7 +97,7 @@ class KeyBindings:
             self.quitting = False
             self.markdown_cell()
 
-        @self.key_bindings.add("o", filter=command_mode)
+        @self.key_bindings.add("c", filter=command_mode)
         def o(event):
             self.quitting = False
             self.code_cell()
@@ -124,22 +118,22 @@ class KeyBindings:
             self.quitting = False
             await self.queue_run_cell(and_select_below=True)
 
-        @self.key_bindings.add("x", filter=command_mode)
+        @self.key_bindings.add("d", filter=command_mode)
         def x(event):
             self.quitting = False
             self.cut_cell()
 
-        @self.key_bindings.add("c", filter=command_mode)
+        @self.key_bindings.add("y", filter=command_mode)
         def c(event):
             self.quitting = False
             self.copy_cell()
 
-        @self.key_bindings.add("c-v", filter=command_mode)
+        @self.key_bindings.add("c-p", filter=command_mode)
         def c_v(event):
             self.quitting = False
             self.paste_cell()
 
-        @self.key_bindings.add("v", filter=command_mode)
+        @self.key_bindings.add("p", filter=command_mode)
         def v(event):
             self.quitting = False
             self.paste_cell(below=True)

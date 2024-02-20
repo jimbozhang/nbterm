@@ -3,7 +3,7 @@
 
 # vinbterm
 
-vinbterm is [nbterm](https://github.com/davidbrochart/nbterm) with some keybinding modifications.
+vinbterm is [nbterm](https://github.com/davidbrochart/nbterm) with some keybinding modifications, and setting edit mode as default.
 
 Lets you view, edit and execute Jupyter Notebooks in the terminal.
 
@@ -22,13 +22,13 @@ You will also need a kernel, e.g. `ipykernel` or `xeus-python` for Python, `xeus
 Open an interactive notebook:
 
 ```
-$ vinbterm my_notebook.ipynb
+$ nbterm my_notebook.ipynb
 ```
 
 Run a notebook in batch mode:
 
 ```
-$ vinbterm --run my_notebook.ipynb
+$ nbterm --run my_notebook.ipynb
 ```
 
 ## Key bindings
@@ -40,17 +40,17 @@ There are two modes: edit mode, and command mode.
 
 In command mode:
 
-- `up`: select cell above.
-- `down`: select cell below.
-- `ctrl-up`: move cell above.
-- `ctrl-down`: move cell below.
+- `k` or `up`: select cell above.
+- `j` or `down`: select cell below.
+- `ctrl-k` or `ctrl-up`: move cell above.
+- `ctrl-j` or `ctrl-down`: move cell below.
 - `a`: insert cell above.
 - `b`: insert cell below.
-- `x`: cut the cell.
-- `c`: copy the cell.
-- `ctrl-v`: paste cell above.
-- `v`: paste cell below.
-- `o`: set as code cell.
+- `d`: cut the cell.
+- `y`: copy the cell.
+- `ctrl-p`: paste cell above.
+- `p`: paste cell below.
+- `c`: set as code cell.
 - `r`: set as raw cell.
 - `m`: set as Markdown cell.
 - `l`: clear cell outputs.
