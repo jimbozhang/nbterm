@@ -51,7 +51,6 @@ class KeyBindings:
             self.quitting = False
             self.save()
 
-        @self.key_bindings.add("enter", filter=command_mode)
         @self.key_bindings.add("i", filter=command_mode)
         def enter_cell(event):
             self.quitting = False
@@ -113,7 +112,7 @@ class KeyBindings:
             self.raw_cell()
 
         @self.key_bindings.add("c-e", filter=command_mode)
-        @self.key_bindings.add("c-enter", filter=command_mode)
+        @self.key_bindings.add("enter", filter=command_mode)
         async def c_e(event):
             self.quitting = False
             await self.queue_run_cell()
