@@ -59,6 +59,7 @@ class KeyBindings:
             self.enter_cell()
 
         @self.key_bindings.add("escape", filter=edit_mode, eager=True)
+        @self.key_bindings.add("c-d", filter=edit_mode, eager=True)
         def escape(event):
             self.quitting = False
             self.exit_cell()
@@ -117,6 +118,7 @@ class KeyBindings:
         async def c_r(event):
             self.quitting = False
             await self.queue_run_cell(and_select_below=True)
+            self.enter_cell()
 
         @self.key_bindings.add("d", filter=command_mode)
         def x(event):

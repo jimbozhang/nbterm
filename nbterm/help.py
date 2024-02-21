@@ -11,7 +11,7 @@ md = Markdown(
     "There are two modes: edit mode, and command mode.\n"
     "\n"
     "- `i`: enter the edit mode, allowing to type into the cell.\n"
-    "- `esc`: exit the edit mode and enter the command mode.\n"
+    "- `ctrl-d` or `esc`: exit the edit mode and enter the command mode.\n"
     "\n"
     "In command mode:\n"
     "\n"
