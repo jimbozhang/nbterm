@@ -11,7 +11,7 @@ md = Markdown(
     "There are two modes: edit mode, and command mode.\n"
     "\n"
     "- `i`: enter the edit mode, allowing to type into the cell.\n"
-    "- `ctrl-d` or `esc`: exit the edit mode and enter the command mode.\n"
+    "- `esc`: exit the edit mode and enter the command mode.\n"
     "\n"
     "In command mode:\n"
     "\n"
@@ -32,7 +32,7 @@ md = Markdown(
     "- `ctrl-e`: run cell.\n"
     "- `enter` or `ctrl-r`: run cell and select below.\n"
     "- `ctrl-w` or `ctrl-s`: save.\n"
-    "- `ctrl-q` or `ctrl-d`: exit.\n"
+    "- `ctrl-q`: exit.\n"
     "- `ctrl-h`: show help.\n"
 )
 

@@ -127,7 +127,6 @@ class Notebook(Help, Format, KeyBindings):
             layout=self.layout, key_bindings=self.key_bindings, full_screen=True
         )
         self.focus(0)
-        self.enter_cell()
         asyncio.run(self._show())
 
     def update_layout(self):

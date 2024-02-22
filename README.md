@@ -35,7 +35,7 @@ $ nbterm --run my_notebook.ipynb
 There are two modes: edit mode, and command mode.
 
 - `i`: enter the edit mode, allowing to type into the cell.
-- `ctrl-d` or `esc`: exit the edit mode and enter the command mode.
+- `esc`: exit the edit mode and enter the command mode.
 
 In command mode:
 
@@ -56,5 +56,5 @@ In command mode:
 - `ctrl-e`: run cell.
 - `enter` or `ctrl-r`: run cell and select below.
 - `ctrl-w` or `ctrl-s`: save.
-- `ctrl-d` or `ctrl-q`: exit.
+- `ctrl-q`: exit.
 - `ctrl-h`: show help.
