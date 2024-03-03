@@ -37,7 +37,7 @@ class KeyBindings:
         def scroll_help_down(event):
             self.scroll_help_down()
 
-        @self.key_bindings.add("c-h")
+        @self.key_bindings.add("c-h", filter=command_mode)
         def c_h(event):
             self.quitting = False
             self.show_help()
@@ -106,7 +106,7 @@ class KeyBindings:
             self.quitting = False
             self.raw_cell()
 
-        @self.key_bindings.add("c-e")
+        @self.key_bindings.add("c-e", filter=command_mode)
         async def c_e(event):
             self.quitting = False
             await self.queue_run_cell()
@@ -116,7 +116,6 @@ class KeyBindings:
         async def c_r(event):
             self.quitting = False
             await self.queue_run_cell(and_select_below=True)
-            self.enter_cell()
 
         @self.key_bindings.add("d", filter=command_mode)
         def x(event):
@@ -142,8 +141,10 @@ class KeyBindings:
         def a(event):
             self.quitting = False
             self.insert_cell()
+            self.enter_cell()
 
         @self.key_bindings.add("b", filter=command_mode)
         def b(event):
             self.quitting = False
             self.insert_cell(below=True)
+            self.enter_cell()
